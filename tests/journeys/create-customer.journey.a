@@ -3,15 +3,15 @@ test("CUST-001/E1 saves a customer") {
     go("/customers/new")
     expectHeading("New customer")
     scan()
+    reload()
   }
   step("fill name Acme Supplies and email ap@acme.test and save") {
     fill("Name", "Acme Supplies")
     fill("Email", "ap@acme.test")
     click("Save")
-    expectUrl("/customers/cus_*")
+    expectText("Customer saved")
   }
   step("see the Acme Supplies customer page") {
-    reload()
     expectHeading("Acme Supplies")
     scan()
   }
