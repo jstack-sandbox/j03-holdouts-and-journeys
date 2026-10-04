@@ -88,5 +88,11 @@
       "issue": 3
     }
   ],
-  "holdouts": []
+  "holdouts": [
+    {
+      "slice": "customer-search",
+      "rule": "CUST-004",
+      "fingerprint": "sha256:565977227cece770ba4a4d8ca93e2819e51b1ace5796941f7e593428d60a76ba"
+    }
+  ]
 }
