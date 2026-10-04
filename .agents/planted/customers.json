@@ -1,0 +1,18 @@
+[
+  {
+    "bug": "save-dropped",
+    "example": "CUST-001/E1"
+  },
+  {
+    "bug": "duplicate-email-allowed",
+    "example": "CUST-002/E1"
+  },
+  {
+    "bug": "duplicate-half-saved",
+    "example": "CUST-002/F1"
+  },
+  {
+    "bug": "firm-filter-removed",
+    "example": "CUST-004/E1"
+  }
+]
