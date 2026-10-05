@@ -1,1 +1,0 @@
-search(operator, term) = customers.where(firm_id = operator.firm_id and name contains term).sort_by(name)
