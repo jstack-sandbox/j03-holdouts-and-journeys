@@ -8,4 +8,4 @@ An operator keeps the customers of their firm: each customer has a name and an e
 - CUST-002: a second customer with an existing email is refused and nothing is saved.
 - CUST-004: an operator of one firm never sees a customer of another.
 
-These rules are planned; the contract below proves them.
+These rules are planned; the contract below proves them, and the owner reads them again each quarter.
