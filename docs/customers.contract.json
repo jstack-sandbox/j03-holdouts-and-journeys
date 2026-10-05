@@ -1,30 +1,8 @@
 {
-  "feature": 74,
-  "rules_digest": "sha256:5a920e6d93784b5cdf31f463b7e2a83684b9be06e15b7d6ccd08389c1ea13817",
   "compared_with": [],
-  "shapes": [
-    "Customer{id, firm_id, name, email}"
-  ],
-  "tests": [
-    {
-      "name": "saves a customer",
-      "proves": "CUST-001/E1",
-      "kind": "journey",
-      "slice": "customer-create"
-    },
-    {
-      "name": "refuses a duplicate email",
-      "proves": "CUST-002/E1",
-      "kind": "journey",
-      "slice": "customer-create"
-    },
-    {
-      "name": "firm B never sees a firm A customer",
-      "proves": "CUST-004/E1",
-      "kind": "integration",
-      "slice": "customer-search"
-    }
-  ],
+  "conflicts": [],
+  "feature": 74,
+  "holdouts": [],
   "journeys": [
     {
       "name": "create-customer",
@@ -36,8 +14,8 @@
           "text": "open the new customer form"
         },
         {
-          "text": "fill name Acme Supplies and email ap@acme.test and save",
-          "saves": true
+          "saves": true,
+          "text": "fill name Acme Supplies and email ap@acme.test and save"
         },
         {
           "text": "see the Acme Supplies customer page"
@@ -52,8 +30,8 @@
       ],
       "steps": [
         {
-          "text": "save name Acme Supplies with email ap@acme.test",
-          "saves": true
+          "saves": true,
+          "text": "save name Acme Supplies with email ap@acme.test"
         },
         {
           "text": "see the Acme Supplies customer page"
@@ -70,29 +48,45 @@
       ]
     }
   ],
+  "rules_digest": "sha256:5a920e6d93784b5cdf31f463b7e2a83684b9be06e15b7d6ccd08389c1ea13817",
   "scenarios": [
     {
-      "id": "S1",
       "area": "customers",
+      "id": "S1",
       "text": "an operator of firm B never sees a firm A customer, even by opening its address"
     }
   ],
-  "conflicts": [],
+  "shapes": [
+    "Customer{id, firm_id, name, email}"
+  ],
   "slices": [
     {
-      "name": "customer-create",
-      "issue": 75
+      "issue": 75,
+      "name": "customer-create"
     },
     {
-      "name": "customer-search",
-      "issue": 76
+      "issue": 76,
+      "name": "customer-search"
     }
   ],
-  "holdouts": [
+  "tests": [
     {
-      "slice": "customer-search",
-      "rule": "CUST-004",
-      "fingerprint": "sha256:565977227cece770ba4a4d8ca93e2819e51b1ace5796941f7e593428d60a76ba"
+      "kind": "journey",
+      "name": "saves a customer",
+      "proves": "CUST-001/E1",
+      "slice": "customer-create"
+    },
+    {
+      "kind": "journey",
+      "name": "refuses a duplicate email",
+      "proves": "CUST-002/E1",
+      "slice": "customer-create"
+    },
+    {
+      "kind": "integration",
+      "name": "firm B never sees a firm A customer",
+      "proves": "CUST-004/E1",
+      "slice": "customer-search"
     }
   ]
 }
