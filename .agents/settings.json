@@ -1,5 +1,5 @@
 {"jstack": {"version": "1.4.0", "checksum": "sha256:92b2d6cc59e50537f76293e81afe4763109549ae8c034f1235c5b4bd57d17ff1"},
- "owners": {"owner": "fund-flow-admin"},
+ "owners": {"owner": "jstack-sandbox-owner"},
  "profiles": {"lang-a": {}, "runner-a": {}, "browser-a": {}},
  "areas": {"customers": {"paths": ["src/customers/**"], "risky": true}, "invoices": {"paths": ["src/invoices/**"], "risky": false}},
  "holdouts": {"store": "jstack-sandbox/holdouts", "folder": "billing"},
