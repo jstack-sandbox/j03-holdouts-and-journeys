@@ -94,6 +94,11 @@
       "slice": "customer-search",
       "rule": "CUST-004",
       "fingerprint": "sha256:565977227cece770ba4a4d8ca93e2819e51b1ace5796941f7e593428d60a76ba"
+    },
+    {
+      "slice": "customer-create",
+      "rule": "CUST-002",
+      "fingerprint": "sha256:cd456cd03344cabcfe15cfb86d28c914296dd5f0444925b412ffd31e98ff4ee0"
     }
   ]
 }
