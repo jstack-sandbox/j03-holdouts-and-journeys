@@ -1,9 +1,5 @@
 [
   {
-    "bug": "save-dropped",
-    "example": "CUST-001/E1"
-  },
-  {
     "bug": "duplicate-email-allowed",
     "example": "CUST-002/E1"
   },
