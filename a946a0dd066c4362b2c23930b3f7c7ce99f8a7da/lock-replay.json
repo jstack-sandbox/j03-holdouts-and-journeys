@@ -1,0 +1,31 @@
+{
+  "commit": "a946a0dd066c4362b2c23930b3f7c7ce99f8a7da",
+  "ran": [
+    "CUST-001/E1 saves a customer",
+    "CUST-002/E1 refuses a duplicate email"
+  ],
+  "tests": [
+    {
+      "name": "CUST-001/E1 saves a customer",
+      "bugs": [
+        {
+          "bug": "save-dropped",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "CUST-002/E1 refuses a duplicate email",
+      "bugs": [
+        {
+          "bug": "duplicate-email-allowed",
+          "result": "caught"
+        },
+        {
+          "bug": "duplicate-half-saved",
+          "result": "caught"
+        }
+      ]
+    }
+  ]
+}
