@@ -12,7 +12,7 @@
     "example": "CUST-002/F1"
   },
   {
-    "bug": "firm-filter-removed",
+    "bug": "workspace-filter-removed",
     "example": "CUST-004/E1"
   }
 ]
