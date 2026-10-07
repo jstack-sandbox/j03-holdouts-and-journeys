@@ -2,4 +2,5 @@
  "owners": {"owner": "jstack-sandbox-owner"},
  "profiles": {"lang-a": {}, "runner-a": {}, "browser-a": {}},
  "areas": {"customers": {"paths": ["src/customers/**"], "risky": true}, "invoices": {"paths": ["src/invoices/**"], "risky": false}},
+ "holdouts": {"store": "jstack-sandbox/holdouts", "folder": "billing"},
  "budgets": {"repair_rounds": 12}}
