@@ -1,6 +1,6 @@
 # Customers
 
-An operator keeps the customers of their workspace: each customer has a name and an email.
+An operator keeps and searches the customers of their workspace: each customer has a name and an email.
 
 ## Rules
 
