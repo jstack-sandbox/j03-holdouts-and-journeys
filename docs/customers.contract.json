@@ -1,17 +1,28 @@
 {
-  "compared_with": [],
-  "conflicts": [],
   "feature": 275,
-  "holdouts": [
+  "rules_digest": "sha256:cf8b4826a2f975db3ad41ec668d0b5206c9daf775404f2cf9fd9bdd3bca3cc5c",
+  "compared_with": [],
+  "shapes": [
+    "Customer{id, workspace_id, name, email}"
+  ],
+  "tests": [
     {
-      "fingerprint": "sha256:a4fbdff60dbb3772a00a70c0b5f1bac74e10d4815a84f895c15d39e411419f7e",
-      "rule": "CUST-001",
+      "name": "saves a customer",
+      "proves": "CUST-001/E1",
+      "kind": "journey",
       "slice": "customer-create"
     },
     {
-      "fingerprint": "sha256:a547871819d0e0d529da97e83f30d89de2deeb97a29a806292c237a41e122003",
-      "rule": "CUST-002",
+      "name": "refuses a duplicate email",
+      "proves": "CUST-002/E1",
+      "kind": "journey",
       "slice": "customer-create"
+    },
+    {
+      "name": "workspace B never sees a workspace A customer",
+      "proves": "CUST-004/E1",
+      "kind": "integration",
+      "slice": "customer-search"
     }
   ],
   "journeys": [
@@ -25,8 +36,8 @@
           "text": "open the new customer form"
         },
         {
-          "saves": true,
-          "text": "fill name Acme Supplies and email ap@acme.test and save"
+          "text": "fill name Acme Supplies and email ap@acme.test and save",
+          "saves": true
         },
         {
           "text": "see the Acme Supplies customer page"
@@ -41,8 +52,8 @@
       ],
       "steps": [
         {
-          "saves": true,
-          "text": "save name Acme Supplies with email ap@acme.test"
+          "text": "save name Acme Supplies with email ap@acme.test",
+          "saves": true
         },
         {
           "text": "see Acme Supplies in the customer list"
@@ -51,8 +62,8 @@
           "text": "save name Acme Again with email ap@acme.test"
         },
         {
-          "refuses": true,
-          "text": "see the refusal 'A customer with this email already exists'"
+          "text": "see the refusal 'A customer with this email already exists'",
+          "refuses": true
         },
         {
           "text": "see exactly one customer with email ap@acme.test, Acme Supplies"
@@ -60,45 +71,39 @@
       ]
     }
   ],
-  "rules_digest": "sha256:cf8b4826a2f975db3ad41ec668d0b5206c9daf775404f2cf9fd9bdd3bca3cc5c",
   "scenarios": [
     {
-      "area": "customers",
       "id": "S1",
+      "area": "customers",
       "text": "an operator of workspace B never sees a workspace A customer, even by opening its address"
     }
   ],
-  "shapes": [
-    "Customer{id, workspace_id, name, email}"
-  ],
+  "conflicts": [],
   "slices": [
     {
-      "issue": 276,
-      "name": "customer-create"
+      "name": "customer-create",
+      "issue": 276
     },
     {
-      "issue": 277,
-      "name": "customer-search"
+      "name": "customer-search",
+      "issue": 277
     }
   ],
-  "tests": [
+  "holdouts": [
     {
-      "kind": "journey",
-      "name": "saves a customer",
-      "proves": "CUST-001/E1",
-      "slice": "customer-create"
+      "slice": "customer-search",
+      "rule": "CUST-004",
+      "fingerprint": "sha256:565977227cece770ba4a4d8ca93e2819e51b1ace5796941f7e593428d60a76ba"
     },
     {
-      "kind": "journey",
-      "name": "refuses a duplicate email",
-      "proves": "CUST-002/E1",
-      "slice": "customer-create"
+      "slice": "customer-create",
+      "rule": "CUST-001",
+      "fingerprint": "sha256:a4fbdff60dbb3772a00a70c0b5f1bac74e10d4815a84f895c15d39e411419f7e"
     },
     {
-      "kind": "integration",
-      "name": "workspace B never sees a workspace A customer",
-      "proves": "CUST-004/E1",
-      "slice": "customer-search"
+      "slice": "customer-create",
+      "rule": "CUST-002",
+      "fingerprint": "sha256:a547871819d0e0d529da97e83f30d89de2deeb97a29a806292c237a41e122003"
     }
   ]
 }
