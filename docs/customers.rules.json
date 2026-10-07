@@ -1,0 +1,42 @@
+{
+  "area": "customers",
+  "rules": [
+    {
+      "id": "CUST-001",
+      "status": "planned",
+      "statement": "a saved customer is still there after a reload",
+      "examples": [
+        {
+          "id": "E1",
+          "text": "an operator saves Acme Supplies, reloads and still sees it"
+        }
+      ]
+    },
+    {
+      "id": "CUST-002",
+      "status": "planned",
+      "statement": "a second customer with an existing email is refused and nothing is saved",
+      "examples": [
+        {
+          "id": "E1",
+          "text": "saving Acme Again with ap@acme.test, Acme Supplies' email, is refused"
+        },
+        {
+          "id": "F1",
+          "text": "the refusal shows, yet a second customer with ap@acme.test is saved"
+        }
+      ]
+    },
+    {
+      "id": "CUST-004",
+      "status": "planned",
+      "statement": "an operator of one workspace never sees a customer of another",
+      "examples": [
+        {
+          "id": "E1",
+          "text": "an operator of workspace B finds no workspace A customer by search or by its address"
+        }
+      ]
+    }
+  ]
+}
