@@ -1,14 +1,14 @@
 [
   {
     "bug": "duplicate-email-allowed",
-    "example": "CUST-002/E1"
+    "test": "a duplicate email is refused"
   },
   {
     "bug": "duplicate-half-saved",
-    "example": "CUST-002/F1"
+    "test": "a duplicate email is refused"
   },
   {
     "bug": "workspace-filter-removed",
-    "example": "CUST-004/E1"
+    "test": "workspace B never sees a workspace A customer"
   }
 ]
