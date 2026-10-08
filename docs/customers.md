@@ -8,4 +8,4 @@ An operator keeps the customers of their workspace: each customer has a name and
 - CUST-002: a second customer with an existing email is refused and nothing is saved.
 - CUST-004: an operator of one workspace never sees a customer of another.
 
-These rules are planned; the contract below proves them.
+These rules are planned; the contract below proves them, and search is built as four slices: search, sort, status and paging.
