@@ -1,6 +1,5 @@
-{"jstack": {"version": "1.4.0", "checksum": "sha256:f017986a05e2b43aa8d5c0526a3887d304c1c1d4cacd72a71e6e2cbdb7cb4358"},
+{"jstack": {"version": "1.4.0", "checksum": "sha256:798907506ff75bc5c19d090a54c77cc396f297a9a68e24ef6eb8289b0a109ef4"},
  "owners": {"owner": "jstack-sandbox-owner"},
  "profiles": {"lang-a": {}, "runner-a": {}, "browser-a": {}},
  "areas": {"customers": {"paths": ["src/customers/**"], "risky": true}, "invoices": {"paths": ["src/invoices/**"], "risky": false}},
- "holdouts": {"store": "jstack-sandbox/holdouts", "folder": "billing"},
  "budgets": {"repair_rounds": 12}}
