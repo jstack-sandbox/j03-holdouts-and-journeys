@@ -2,6 +2,7 @@ test("an operator saves a customer") {
   step("open the new customer form") {
     go("/customers/new")
     expectHeading("New customer")
+    scan()
   }
   step("fill name Acme Supplies and email ap@acme.test and save") {
     fill("Name", "Acme Supplies")
