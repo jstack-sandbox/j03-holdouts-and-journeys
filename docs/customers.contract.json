@@ -22,6 +22,11 @@
       "slice": "customer-sort",
       "rule": "CUST-004",
       "fingerprint": "sha256:75eca31eb629da3f9f3fe181cfb2eb635a6d34c966f42f74cfa985e5c52bd767"
+    },
+    {
+      "slice": "customer-status",
+      "rule": "CUST-004",
+      "fingerprint": "sha256:1ef0fd8cd9dff35bdba7e9f61176a751f8e9e6169388c777fc9fe09ad720ee06"
     }
   ],
   "journeys": [
