@@ -1,0 +1,33 @@
+test("CUST-002/E1 refuses a duplicate email") {
+  step("save name Acme Supplies with email ap@acme.test") {
+    go("/customers/new")
+    expectHeading("New customer")
+    scan()
+    fill("Name", "Acme Supplies")
+    fill("Email", "ap@acme.test")
+    click("Save")
+  }
+  step("see Acme Supplies in the customer list") {
+    go("/customers")
+    expectText("Acme Supplies")
+    scan()
+  }
+  step("save name Acme Again with email ap@acme.test") {
+    go("/customers/new")
+    expectHeading("New customer")
+    scan()
+    fill("Name", "Acme Again")
+    fill("Email", "ap@acme.test")
+    click("Save")
+  }
+  step("see the refusal 'A customer with this email already exists'") {
+    expectAlert("A customer with this email already exists")
+    scan()
+  }
+  step("see exactly one customer with email ap@acme.test, Acme Supplies") {
+    go("/customers?email=ap@acme.test")
+    expectRows("Customers", 1)
+    expectText("Acme Supplies")
+    scan()
+  }
+}
