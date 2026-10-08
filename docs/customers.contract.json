@@ -4,24 +4,34 @@
   "feature": 416,
   "holdouts": [
     {
-      "fingerprint": "sha256:565977227cece770ba4a4d8ca93e2819e51b1ace5796941f7e593428d60a76ba",
+      "slice": "customer-search",
       "rule": "CUST-004",
-      "slice": "customer-search"
+      "fingerprint": "sha256:565977227cece770ba4a4d8ca93e2819e51b1ace5796941f7e593428d60a76ba"
     },
     {
-      "fingerprint": "sha256:a4fbdff60dbb3772a00a70c0b5f1bac74e10d4815a84f895c15d39e411419f7e",
+      "slice": "customer-create",
       "rule": "CUST-001",
-      "slice": "customer-create"
+      "fingerprint": "sha256:a4fbdff60dbb3772a00a70c0b5f1bac74e10d4815a84f895c15d39e411419f7e"
     },
     {
-      "fingerprint": "sha256:a547871819d0e0d529da97e83f30d89de2deeb97a29a806292c237a41e122003",
+      "slice": "customer-create",
       "rule": "CUST-002",
-      "slice": "customer-create"
+      "fingerprint": "sha256:a547871819d0e0d529da97e83f30d89de2deeb97a29a806292c237a41e122003"
     },
     {
-      "fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
-      "rule": "CUST-001",
-      "slice": "customer-create"
+      "slice": "customer-sort",
+      "rule": "CUST-004",
+      "fingerprint": "sha256:75eca31eb629da3f9f3fe181cfb2eb635a6d34c966f42f74cfa985e5c52bd767"
+    },
+    {
+      "slice": "customer-status",
+      "rule": "CUST-004",
+      "fingerprint": "sha256:1ef0fd8cd9dff35bdba7e9f61176a751f8e9e6169388c777fc9fe09ad720ee06"
+    },
+    {
+      "slice": "customer-paging",
+      "rule": "CUST-004",
+      "fingerprint": "sha256:880d6a1e4e92486ca2136f0c7dfd317d93ab27d3abd7b5e15a1e7628aaaaffa4"
     }
   ],
   "journeys": [
@@ -70,7 +80,7 @@
       ]
     }
   ],
-  "rules_digest": "sha256:cf8b4826a2f975db3ad41ec668d0b5206c9daf775404f2cf9fd9bdd3bca3cc5c",
+  "rules_digest": "sha256:fbdf1a3cb40a2c6728e3a7372844dc945ff37a483442d6f36581efe2e574b05a",
   "scenarios": [
     {
       "area": "customers",
@@ -121,6 +131,24 @@
       "name": "workspace B never sees a workspace A customer",
       "proves": "CUST-004/E1",
       "slice": "customer-search"
+    },
+    {
+      "kind": "integration",
+      "name": "sorted search never shows a workspace A customer",
+      "proves": "CUST-004/E1",
+      "slice": "customer-sort"
+    },
+    {
+      "kind": "integration",
+      "name": "status filter never shows a workspace A customer",
+      "proves": "CUST-004/E1",
+      "slice": "customer-status"
+    },
+    {
+      "kind": "integration",
+      "name": "paged search never shows a workspace A customer",
+      "proves": "CUST-004/E1",
+      "slice": "customer-paging"
     }
   ]
 }
