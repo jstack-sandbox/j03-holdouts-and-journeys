@@ -32,6 +32,11 @@
       "slice": "customer-paging",
       "rule": "CUST-004",
       "fingerprint": "sha256:880d6a1e4e92486ca2136f0c7dfd317d93ab27d3abd7b5e15a1e7628aaaaffa4"
+    },
+    {
+      "slice": "customer-create",
+      "rule": "CUST-002",
+      "fingerprint": "sha256:d77b65c40a5d021588aca2c46d82fa84addd4e24855bbce172f9927ea79805e9"
     }
   ],
   "journeys": [
