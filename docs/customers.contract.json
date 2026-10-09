@@ -1,0 +1,104 @@
+{
+  "feature": 517,
+  "checklist_digest": "sha256:fb3a8a5560b818f9cdb97c60f7c4a359c4355dcd307917fb8506f29fcb128f91",
+  "compared_with": [],
+  "shapes": [
+    "Customer{id, workspace_id, name, email}"
+  ],
+  "tests": [
+    {
+      "name": "an operator saves a customer",
+      "covers": "an operator saves Acme Supplies, reloads and still sees it",
+      "kind": "journey",
+      "slice": "customer-create"
+    },
+    {
+      "name": "a duplicate email is refused",
+      "covers": "saving Acme Again with ap@acme.test, Acme Supplies' email, is refused and nothing is saved",
+      "kind": "journey",
+      "slice": "customer-create"
+    },
+    {
+      "name": "workspace B never sees a workspace A customer",
+      "covers": "an operator of workspace B finds no workspace A customer by search or by its address",
+      "kind": "integration",
+      "slice": "customer-search"
+    }
+  ],
+  "journeys": [
+    {
+      "name": "create-customer",
+      "covers": [
+        "an operator saves Acme Supplies, reloads and still sees it"
+      ],
+      "steps": [
+        {
+          "text": "open the new customer form"
+        },
+        {
+          "text": "fill name Acme Supplies and email ap@acme.test and save",
+          "saves": true
+        },
+        {
+          "text": "see the Acme Supplies customer page"
+        }
+      ]
+    },
+    {
+      "name": "refuse-duplicate-email",
+      "covers": [
+        "saving Acme Again with ap@acme.test, Acme Supplies' email, is refused and nothing is saved"
+      ],
+      "steps": [
+        {
+          "text": "save name Acme Supplies with email ap@acme.test",
+          "saves": true
+        },
+        {
+          "text": "see Acme Supplies in the customer list"
+        },
+        {
+          "text": "save name Acme Again with email ap@acme.test"
+        },
+        {
+          "text": "see the refusal 'A customer with this email already exists'",
+          "refuses": true
+        },
+        {
+          "text": "see exactly one customer with email ap@acme.test, Acme Supplies"
+        }
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S1",
+      "area": "customers",
+      "text": "an operator of workspace B never sees a workspace A customer, even by opening its address"
+    }
+  ],
+  "conflicts": [],
+  "slices": [
+    {
+      "name": "customer-create",
+      "issue": 518
+    },
+    {
+      "name": "customer-search",
+      "issue": 519
+    },
+    {
+      "name": "customer-sort",
+      "issue": 520
+    },
+    {
+      "name": "customer-status",
+      "issue": 521
+    },
+    {
+      "name": "customer-paging",
+      "issue": 522
+    }
+  ],
+  "holdouts": []
+}
