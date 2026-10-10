@@ -1,1 +1,1 @@
-{"issue": 725, "decisions": [], "open_questions": []}
+{"issue": 725, "decisions": [{"choice": "search matches a customer's name or email", "alternative": "the name alone", "why": "operators search by either"}], "open_questions": []}
