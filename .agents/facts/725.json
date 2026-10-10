@@ -1,1 +1,1 @@
-{"issue": 725, "decisions": [], "open_questions": []}
+{"issue": 725, "decisions": [{"choice": "the export lists customers by name", "alternative": "by when each was saved", "why": "operators read it by name"}], "open_questions": []}
