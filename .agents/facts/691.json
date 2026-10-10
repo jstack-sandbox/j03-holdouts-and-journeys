@@ -1,1 +1,1 @@
-{"issue": 691, "decisions": [{"choice": "the export lists customers by name", "alternative": "by when each was saved", "why": "operators read it by name"}], "open_questions": []}
+{"issue": 691, "decisions": [{"choice": "the export lists customers by name", "alternative": "by when each was saved", "why": "operators read it by name"}, {"choice": "the export is a CSV file", "alternative": "a spreadsheet", "why": "every operator's tools open CSV"}], "open_questions": []}
