@@ -43,6 +43,11 @@
       "slice": "customer-create",
       "item": "saving Acme Again with ap@acme.test, Acme Supplies' email, is refused and nothing is saved",
       "fingerprint": "sha256:d77b65c40a5d021588aca2c46d82fa84addd4e24855bbce172f9927ea79805e9"
+    },
+    {
+      "slice": "customer-search",
+      "item": "an operator of workspace B finds no workspace A customer by search or by its address",
+      "fingerprint": "sha256:98f63c357eefba96d1ca486201f6e42552a39f4a7819c31f32bd8568d9972ef0"
     }
   ],
   "journeys": [
