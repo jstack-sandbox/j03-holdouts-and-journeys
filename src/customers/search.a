@@ -1,1 +1,1 @@
-search(term) = customers.where(name contains term)
+search(operator, term) = customers.where(workspace_id = operator.workspace_id and name contains term)
