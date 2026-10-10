@@ -1,1 +1,1 @@
-{"issue": 613, "decisions": [{"choice": "search matches a customer's name or email", "alternative": "the name alone", "why": "operators search by either"}], "open_questions": []}
+{"issue": 613, "decisions": [{"choice": "search matches a customer's name or email", "alternative": "the name alone", "why": "operators search by either"}, {"choice": "search ignores letter case", "alternative": "an exact match", "why": "operators type names in lower case"}], "open_questions": []}
