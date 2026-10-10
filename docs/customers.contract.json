@@ -5,19 +5,24 @@
   "feature": 691,
   "holdouts": [
     {
-      "fingerprint": "sha256:565977227cece770ba4a4d8ca93e2819e51b1ace5796941f7e593428d60a76ba",
+      "slice": "customer-search",
       "item": "an operator of workspace B finds no workspace A customer by search or by its address",
-      "slice": "customer-search"
+      "fingerprint": "sha256:565977227cece770ba4a4d8ca93e2819e51b1ace5796941f7e593428d60a76ba"
     },
     {
-      "fingerprint": "sha256:a4fbdff60dbb3772a00a70c0b5f1bac74e10d4815a84f895c15d39e411419f7e",
+      "slice": "customer-create",
       "item": "an operator saves Acme Supplies, reloads and still sees it",
-      "slice": "customer-create"
+      "fingerprint": "sha256:a4fbdff60dbb3772a00a70c0b5f1bac74e10d4815a84f895c15d39e411419f7e"
     },
     {
-      "fingerprint": "sha256:a547871819d0e0d529da97e83f30d89de2deeb97a29a806292c237a41e122003",
+      "slice": "customer-create",
       "item": "saving Acme Again with ap@acme.test, Acme Supplies' email, is refused and nothing is saved",
-      "slice": "customer-create"
+      "fingerprint": "sha256:a547871819d0e0d529da97e83f30d89de2deeb97a29a806292c237a41e122003"
+    },
+    {
+      "slice": "customer-sort",
+      "item": "an operator of workspace B finds no workspace A customer by search or by its address",
+      "fingerprint": "sha256:75eca31eb629da3f9f3fe181cfb2eb635a6d34c966f42f74cfa985e5c52bd767"
     }
   ],
   "journeys": [
