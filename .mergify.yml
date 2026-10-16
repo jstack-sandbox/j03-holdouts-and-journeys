@@ -15,3 +15,4 @@ queue_rules:
       - "check-success=jstack/lock"
     merge_conditions:
       - "check-success=02 tests"
+      - "check-success=jstack/holdouts"
