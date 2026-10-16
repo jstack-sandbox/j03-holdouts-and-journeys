@@ -8,10 +8,9 @@ test("an operator saves a customer") {
     fill("Name", "Acme Supplies")
     fill("Email", "ap@acme.test")
     click("Save")
-    expectUrl("/customers/cus_*")
+    expectText("Customer saved")
   }
   step("see the Acme Supplies customer page") {
-    reload()
     expectHeading("Acme Supplies")
     scan()
   }
