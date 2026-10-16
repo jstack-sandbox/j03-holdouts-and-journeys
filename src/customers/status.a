@@ -1,1 +1,0 @@
-status_filter(results, status) = results.where(status = status)
