@@ -21,7 +21,7 @@ test("a duplicate email is refused") {
     click("Save")
   }
   step("see the refusal 'A customer with this email already exists'") {
-    expectAlert("A customer with this email already exists")
+    expectText("A customer with this email already exists")
     scan()
   }
   step("see exactly one customer with email ap@acme.test, Acme Supplies") {
