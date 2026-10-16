@@ -2,7 +2,6 @@
  "owners": {"owner": "jstack-sandbox-owner"},
  "profiles": {"lang-a": {}, "runner-a": {}, "browser-a": {}},
  "areas": {"customers": {"paths": ["src/customers/**"], "risky": true}, "invoices": {"paths": ["src/invoices/**"], "risky": false}},
- "holdouts": {"store": "jstack-sandbox/holdouts", "folder": "billing"},
  "budgets": {"repair_rounds": 12},
  "required_checks": {"jstack/lock": {"producer": {"app": "jstack"}},
    "01 lint": {"producer": {"workflow": ".github/workflows/ci.yml", "job": "lint"}},
