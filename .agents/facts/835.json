@@ -1,0 +1,49 @@
+{
+  "issue": 835,
+  "tests": [
+    {
+      "name": "an operator saves a customer",
+      "covers": "an operator saves Acme Supplies, reloads and still sees it",
+      "kind": "journey",
+      "journey": "create-customer",
+      "steps": [
+        {
+          "text": "open the new customer form"
+        },
+        {
+          "text": "fill name Acme Supplies and email ap@acme.test and save",
+          "saves": true
+        },
+        {
+          "text": "see the Acme Supplies customer page"
+        }
+      ]
+    },
+    {
+      "name": "a duplicate email is refused",
+      "covers": "saving Acme Again with ap@acme.test, Acme Supplies' email, is refused and nothing is saved",
+      "kind": "journey",
+      "journey": "refuse-duplicate-email",
+      "steps": [
+        {
+          "text": "save name Acme Supplies with email ap@acme.test",
+          "saves": true
+        },
+        {
+          "text": "see Acme Supplies in the customer list"
+        },
+        {
+          "text": "save name Acme Again with email ap@acme.test"
+        },
+        {
+          "text": "see the refusal 'A customer with this email already exists'",
+          "refuses": true
+        },
+        {
+          "text": "see exactly one customer with email ap@acme.test, Acme Supplies"
+        }
+      ]
+    }
+  ],
+  "open_questions": []
+}
