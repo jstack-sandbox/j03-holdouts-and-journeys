@@ -5,13 +5,14 @@ group("an operator saves Acme Supplies, reloads and still sees it") {
       expectHeading("New customer")
       scan()
     }
-    step("fill name Acme Supplies and email ap@acme.test and save @saves") {
+    step("fill name Acme Supplies and email ap@acme.test and save") {
       fill("Name", "Acme Supplies")
       fill("Email", "ap@acme.test")
       click("Save")
-      expectText("Customer saved")
+      expectUrl("/customers/cus_*")
     }
     step("see the Acme Supplies customer page") {
+      reload()
       expectHeading("Acme Supplies")
       scan()
     }
