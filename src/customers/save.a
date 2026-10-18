@@ -1,0 +1,1 @@
+save(customer) = refuse_if(exists(email: customer.email), "A customer with this email already exists") then insert(customer)
