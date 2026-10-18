@@ -1,4 +1,4 @@
-{"jstack": {"version": "1.4.0", "checksum": "sha256:cc356c656487cf9b63fa59ca5d6bbdf0ce87a24aa3ecb930693321848379fcf1"},
+{"jstack": {"version": "1.4.0", "checksum": "sha256:b0b7ee993f52429cc95c2b5ee32e87d3a181345fbae90c053a4e7d1acd12c327"},
  "owners": {"owner": "jstack-sandbox-owner"},
  "profiles": {"lang-a": {}, "runner-a": {}, "browser-a": {}},
  "areas": {"customers": {"paths": ["src/customers/**"], "risky": true}, "invoices": {"paths": ["src/invoices/**"], "risky": false}},
