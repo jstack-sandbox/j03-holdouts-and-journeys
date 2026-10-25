@@ -1,0 +1,35 @@
+{
+  "commit": "53c70d45080c038f70eab7806007f13b909e11a7",
+  "ran": [
+    "an operator saves a customer",
+    "a duplicate email is refused"
+  ],
+  "tests": [
+    {
+      "name": "an operator saves a customer",
+      "bugs": [
+        {
+          "bug": "save-dropped@2",
+          "result": "caught"
+        }
+      ]
+    },
+    {
+      "name": "a duplicate email is refused",
+      "bugs": [
+        {
+          "bug": "save-dropped@1",
+          "result": "caught"
+        },
+        {
+          "bug": "duplicate-email-allowed",
+          "result": "caught"
+        },
+        {
+          "bug": "duplicate-half-saved",
+          "result": "caught"
+        }
+      ]
+    }
+  ]
+}
