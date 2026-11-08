@@ -1,1 +1,1 @@
-page(results, n) = results.skip((n - 1) * 25).take(25)
+page(results, n) = results.skip((n - 1) * 50).take(50)
