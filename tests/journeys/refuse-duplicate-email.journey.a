@@ -22,7 +22,7 @@ group("saving Acme Again with ap@acme.test, Acme Supplies' email, is refused and
       click("Save")
     }
     step("see the refusal 'A customer with this email already exists' @refuses") {
-      expectAlert("A customer with this email already exists")
+      expectText("A customer with this email already exists")
       scan()
     }
     step("see exactly one customer with email ap@acme.test, Acme Supplies") {
